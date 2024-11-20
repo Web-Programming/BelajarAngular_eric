@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HousingLocation } from './housing-location/housing-location';
+import { HousingLocation } from './housing-location';
 
 @Injectable({
   providedIn: 'root'
@@ -114,7 +114,10 @@ export class HousingService {
     return this.housingLocationList;
   }
   getHousingLocationById(id: Number) : HousingLocation | undefined{
-    return this.housingLocationList.find(housingLocation => 
+    return this.housingLocationList.find(housingLocation =>
       housingLocation.id == id);
+  }
+  submitAppLocation(firstName: String, lastName: String, email: String){
+
   }
 }
